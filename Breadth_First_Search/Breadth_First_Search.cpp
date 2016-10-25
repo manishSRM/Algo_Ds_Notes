@@ -29,11 +29,7 @@ class Graph
 
 void Graph::bfs(int starting)
 {
-    bool visited[numberVertex];
-
-    for(int i = 0; i < numberVertex; i++)
-        visited[i] = false;
-
+    vector<bool> visited(numberVertex, false);
     queue <int> queue_vertex;
 
     visited[starting] = true;
@@ -56,6 +52,7 @@ void Graph::bfs(int starting)
             }
         }
     }
+    cout << endl;
 }
 
 int main()
